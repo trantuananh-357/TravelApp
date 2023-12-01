@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Active state -->
+    <item android:state_enabled="true" android:drawable="@drawable/background_active" />
+
+    <!-- Default state -->
+    <item android:drawable="@drawable/background_btn_inactive" />
+</selector>

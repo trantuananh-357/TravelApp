@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_word">#FF585858</color>
+    <color name="color_btn">#FF008FA0</color>
+    <color name="color_white_btn">#FFF</color>
+    <color name="color_stoke_search" >#FFE9E9E9</color>
+    <color name="color_card_word" >#FF1E1E1E</color>
+
+</resources>
