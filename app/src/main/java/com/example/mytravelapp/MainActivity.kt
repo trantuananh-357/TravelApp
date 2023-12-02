@@ -62,6 +62,9 @@ class MainActivity : AppCompatActivity() {
              when(it.itemId){
                  R.id.home -> {
                         showFragment(home)
+
+
+
                      return@setOnItemSelectedListener true
 //                     badgeClear(R.id.home)
                  }
@@ -119,6 +122,18 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    }
+
+    override fun onBackPressed() {
+        // Check if the current fragment is the home fragment
+        val currentFragment = fragmentManager.findFragmentById(R.id.frame_layout)
+        if (currentFragment is homeFragment) {
+            // If it is, handle the back press as needed (e.g., close the app or show a confirmation dialog)
+            super.onBackPressed() // Call super to allow the default behavior (closing the app)
+        } else {
+            // If it's not the home fragment, navigate back as usual
+            binding.bottomNavigationView.selectedItemId = R.id.home
+        }
     }
 
 

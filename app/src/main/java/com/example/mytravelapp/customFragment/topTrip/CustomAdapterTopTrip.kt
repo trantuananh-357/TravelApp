@@ -20,6 +20,7 @@ import org.w3c.dom.Text
 
 class CustomAdapterTopTrip(private val items: List<Outdata>) : RecyclerView.Adapter<CustomAdapterTopTrip.TopTripViewHolder>() {
     lateinit var context : Context
+    var flag : Boolean =  false
 
 
     interface OnItemClickListener {
@@ -68,7 +69,7 @@ class CustomAdapterTopTrip(private val items: List<Outdata>) : RecyclerView.Adap
 
   // Thay "your_color" bằng mã màu của bạn
 
-            iconVote.setImageResource(R.drawable.icon_love_active)
+            toggleBtnLove(flag, iconVote)
 //
         }
 
@@ -84,6 +85,20 @@ class CustomAdapterTopTrip(private val items: List<Outdata>) : RecyclerView.Adap
 
 
 
+
+
+    }
+
+    private fun toggleBtnLove(isActive: Boolean, active_img : ImageView ){
+        if(isActive){
+            flag = false
+            active_img.setImageResource(R.drawable.icon_love_active)
+
+        }
+        else{
+            flag= true
+            active_img.setImageResource(R.drawable.icon_love)
+        }
 
 
     }

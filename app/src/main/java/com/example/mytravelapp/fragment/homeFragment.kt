@@ -40,6 +40,8 @@ class homeFragment : Fragment() {
         //Render categories
         val items = mutableListOf<OutData>()
         items.add(OutData(R.drawable.mountain_solid, "Mountains"))
+        items.add(OutData(R.drawable.water_solid, "Mountains"))
+        items.add(OutData(R.drawable.tree_solid, "Mountains"))
         val adapter = CustomAdapterCategories(items)
         var recyclerViewCategories : RecyclerView = view.findViewById(R.id.viewRenderCategories)
         recyclerViewCategories.adapter = adapter

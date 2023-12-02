@@ -17,7 +17,7 @@ import com.example.mytravelapp.R
 class CustomAdapterCategories(private val items: List<OutData>) : RecyclerView.Adapter<CustomAdapterCategories.CategoriesViewHolder>() {
     lateinit var context : Context
 
-    var flag : Boolean =  false
+    var flag : Boolean =  true
 
     inner class CategoriesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
@@ -53,7 +53,6 @@ class CustomAdapterCategories(private val items: List<OutData>) : RecyclerView.A
 
 
 
-        setButtonActive(flag, img, drawable, active_background, activ_background_icon)
 
         holder.itemView.setOnClickListener{
             setButtonActive(flag, img, drawable, active_background, activ_background_icon)
@@ -67,13 +66,6 @@ class CustomAdapterCategories(private val items: List<OutData>) : RecyclerView.A
 
 
     }
-    private fun getDrawableName(drawableId: Int): String {
-        return try {
-            context.resources.getResourceEntryName(drawableId)
-        } catch (e: Resources.NotFoundException) {
-            "Not found"
-        }
-    }
 
 
     private fun setButtonActive(isActive : Boolean, active_img : ImageView, drawable : Drawable, active_background : LinearLayout, activ_background_icon : LinearLayout){
@@ -82,14 +74,9 @@ class CustomAdapterCategories(private val items: List<OutData>) : RecyclerView.A
             active_background.setBackgroundResource(R.drawable.background_categories )
             activ_background_icon.setBackgroundResource(R.drawable.background_icon_active)
 
-            // Xử lí tố màu viền ngoài cho icon
-            val color = ContextCompat.getColor(context, R.color.white) // Thay "your_color" bằng mã màu của bạn
-            val wrappedDrawable = DrawableCompat.wrap(drawable)
-            DrawableCompat.setTint(wrappedDrawable, color)
-            DrawableCompat.setTintMode(wrappedDrawable, PorterDuff.Mode.SRC_IN)
+            setVectorColor(active_img, R.color.white)
 
-            // Đặt Drawable đã được thay đổi màu vào ImageView
-            active_img.setImageDrawable(wrappedDrawable)
+
 
         }
         else{
@@ -98,39 +85,19 @@ class CustomAdapterCategories(private val items: List<OutData>) : RecyclerView.A
             active_background.setBackgroundResource(R.drawable.background_button_toggle_inactive )
             activ_background_icon.setBackgroundResource(com.google.android.material.R.color.mtrl_btn_transparent_bg_color)
 
-            // Xử lí tố màu viền ngoài cho icon
-            val color = ContextCompat.getColor(context, R.color.color_btn) // Thay "your_color" bằng mã màu của bạn
-            val wrappedDrawable = DrawableCompat.wrap(drawable)
-            DrawableCompat.setTint(wrappedDrawable, color)
-            DrawableCompat.setTintMode(wrappedDrawable, PorterDuff.Mode.SRC_IN)
+            setVectorColor(active_img, R.color.color_btn)
 
-            // Đặt Drawable đã được thay đổi màu vào ImageView
-            active_img.setImageDrawable(wrappedDrawable)
+
+
 
         }
+
+
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    fun setVectorColor(imageView: ImageView, colorResId: Int) {
+        val color = ContextCompat.getColor(imageView.context, colorResId)
+        imageView.setColorFilter(color, PorterDuff.Mode.SRC_IN)
+    }
 
 
 }
