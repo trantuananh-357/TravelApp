@@ -22,10 +22,11 @@
             android:layout_height="100dp"
             android:scaleType="fitXY"
             android:padding="2dp"
+            android:layout_marginTop="7dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/location_2" />
+            app:srcCompat="@drawable/location_4" />
 
         <LinearLayout
             android:layout_width="0dp"

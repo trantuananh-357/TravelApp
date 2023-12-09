@@ -34,7 +34,7 @@ class CustomAdapterSavedStrip(val items: List<OutData>) : RecyclerView.Adapter<C
             val img = holder.itemView.findViewById<ImageView>(R.id.imgSaveTrip)
             Glide.with(this)
                 .load(items[position].img)
-                .apply(RequestOptions().transform(RoundedCorners(80))) // Đặt bán kính bo góc
+                .apply(RequestOptions().transform(RoundedCorners(1))) // Đặt bán kính bo góc
                 .into(img)
 
             nameTrip.text = items[position].namePlace

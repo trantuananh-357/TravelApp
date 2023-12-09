@@ -69,53 +69,50 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_marginBottom="15dp">
-
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter_medium"
-                    android:text="Username"
-                    android:textColor="@color/color_word"
-                    android:textFontWeight="700"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
+              >
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
 
-                    <EditText
-                        android:id="@+id/editTextText1"
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/edittext_bottom_line"
-                        android:ems="10"
-                        android:textSize="15sp"
-                        android:textColor="@color/color_word"
-                        android:inputType="text"
-                        android:paddingBottom="8dp"
-                        android:hint="Enter username"
-                        android:textColorHint="@color/color_word"
-                        android:paddingTop="8dp"
-
+                        android:layout_height="match_parent"
+                        app:helperText="@string/required"
+                        android:id="@+id/ContainerUsername"
+                        app:helperTextTextColor="@android:color/holo_red_dark"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextUsername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_bottom_line"
+                            android:ems="10"
+                            android:hint="Enter username"
+                            android:inputType="text"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:textColor="@color/color_word"
+                            android:textColorHint="@color/color_word"
+                            android:textSize="15sp"
+
+                          />
+                    </com.google.android.material.textfield.TextInputLayout>
+
 
                     <ImageView
-                        android:id="@+id/imageView32"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginBottom="10dp"
+                        android:id="@+id/icon_checkUserName"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
                         android:src="@drawable/ico_check_form"
+                        android:visibility="invisible"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/editTextText1"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -124,52 +121,54 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_marginBottom="15dp">
+                >
 
-                <TextView
-                    android:id="@+id/textView23"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Password"
-                    android:textFontWeight="700"
-                    android:fontFamily="@font/inter_medium"
-
-                    android:textSize="12sp"
-                    android:textColor="@color/color_word"/>
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
 
-                    <EditText
-                        android:id="@+id/editTextText23"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ContainerPassWord"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/edittext_bottom_line"
-                        android:ems="10"
-                        android:inputType="textPassword"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp"
-                        android:hint="Enter password"
-                        android:textSize="15sp"
-                        android:textColor="@color/color_word"
-                        android:textColorHint="@color/color_word"
-
-
+                        android:layout_height="match_parent"
+                        app:helperTextTextColor="@android:color/holo_red_dark"
+                        app:helperText="@string/required"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="16"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleDrawable="@drawable/eye_slash_regular"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextPassWord"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_bottom_line"
+                            android:ems="10"
+                            android:hint="Enter password"
+                            android:inputType="textPassword"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:textColor="@color/color_word"
+                            android:textColorHint="@color/color_word"
+                            android:textSize="15sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
 
                     <ImageView
-                        android:id="@+id/imageView33"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginBottom="10dp"
+                        android:id="@+id/icon_checkPassword"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
                         android:src="@drawable/ico_check_form"
+                        android:visibility="invisible"
+
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/editTextText23"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -180,52 +179,52 @@
                 android:orientation="vertical"
                 android:layout_marginBottom="10dp">
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Repassword"
-                    android:textFontWeight="700"
-                    android:textSize="12sp"
-                    android:fontFamily="@font/inter_medium"
-
-                    android:textColor="@color/color_word"/>
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
 
-                    <EditText
-                        android:id="@+id/editTextText"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ContainerRepassWord"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/edittext_bottom_line"
-                        android:ems="10"
-                        android:inputType="textPassword"
-                        android:paddingBottom="8dp"
-                        android:textColorHint="@color/color_word"
-
-                        android:paddingTop="8dp"
-                        android:textSize="15sp"
-                        android:hint="Enter password"
-
-
-                        android:textColor="@color/color_word"
-
+                        android:layout_height="match_parent"
+                        app:helperTextTextColor="@android:color/holo_red_dark"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextRePassWord"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_bottom_line"
+                            android:ems="10"
+                            android:hint="Enter password"
+                            android:inputType="textPassword"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:textColor="@color/color_word"
+                            android:textColorHint="@color/color_word"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
 
                     <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginBottom="10dp"
+                        android:id="@+id/icon_repassword"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
                         android:src="@drawable/ico_check_form"
+                        android:visibility="invisible"
+
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/editTextText"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -266,7 +265,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnSubmitForm"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:layout_gravity="center"
@@ -289,17 +288,7 @@
                 android:text="Don't have Account?"
                 android:textSize="10sp" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:background="@drawable/background_line_btn"
-                android:text="Create Account"
-                android:textAllCaps="false"
 
-
-
-                android:textColor="@color/color_btn" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

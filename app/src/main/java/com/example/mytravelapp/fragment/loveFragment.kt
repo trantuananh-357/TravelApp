@@ -28,10 +28,10 @@ class loveFragment : Fragment() {
         val listPackages = mutableListOf<OutData>()
 
 
-        listEvent.add(OutData(R.drawable.location_6, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
-        listEvent.add(OutData(R.drawable.location_5, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
         listEvent.add(OutData(R.drawable.location_4, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
-        listEvent.add(OutData(R.drawable.location_3, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
+        listEvent.add(OutData(R.drawable.location_4, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
+        listEvent.add(OutData(R.drawable.location_4, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
+        listEvent.add(OutData(R.drawable.location_4, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
 
         customAdapterSavedStrip = CustomAdapterSavedStrip(listEvent)
 
@@ -40,12 +40,12 @@ class loveFragment : Fragment() {
 
 
 
-        listPackages.add(OutData(R.drawable.location_6, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
-        listPackages.add(OutData(R.drawable.location_5, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
-        listPackages.add(OutData(R.drawable.location_3, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
-        listPackages.add(OutData(R.drawable.location_2, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
         listPackages.add(OutData(R.drawable.location_4, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
-        listPackages.add(OutData(R.drawable.location_3, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
+        listPackages.add(OutData(R.drawable.location_4, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
+        listPackages.add(OutData(R.drawable.location_4, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
+        listPackages.add(OutData(R.drawable.location_4, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
+        listPackages.add(OutData(R.drawable.location_4, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
+        listPackages.add(OutData(R.drawable.location_4, "RedFish Lake" , "Idaho",  "40" , "3 day visit", "4.5"))
         customAdapterSavedStrip = CustomAdapterSavedStrip(listPackages)
 
         recyclerPackage.adapter = customAdapterSavedStrip

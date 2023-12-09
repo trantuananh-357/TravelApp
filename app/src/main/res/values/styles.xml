@@ -4,6 +4,11 @@
         <!-- ... other styles ... -->
         <item name="android:fontFamily">@font/inter_medium</item>
     </style>
+    <style name="HelperTextAppearance" parent="TextAppearance.Design.HelperText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_gravity">start</item>
+
+    </style>
 
 
 </resources>

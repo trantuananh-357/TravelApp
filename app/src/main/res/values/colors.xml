@@ -7,5 +7,7 @@
     <color name="color_white_btn">#FFF</color>
     <color name="color_stoke_search" >#FFE9E9E9</color>
     <color name="color_card_word" >#FF1E1E1E</color>
+    <color name="color_suscessful">#19A81E</color>
+    <color name="color_error">#E41414</color>
 
 </resources>

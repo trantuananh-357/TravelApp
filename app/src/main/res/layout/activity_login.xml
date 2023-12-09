@@ -34,10 +34,9 @@
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleType="fitEnd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:scaleType="fitEnd"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/earth_2" />
 
@@ -77,130 +76,144 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <ImageView
+                    android:id="@+id/imageView81"
+                    android:layout_width="17.5dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="18dp"
+
+                    android:layout_marginTop="30dp"
+                    android:elevation="100dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icon_email" />
+
+                <ImageView
+                    android:id="@+id/immCheckSuscess"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="18dp"
+                    android:elevation="100dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icon_check_white" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ContainerEmail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/background_btn">
+                    android:orientation="horizontal"
+                    app:helperText="@string/required"
+                    app:helperTextTextAppearance="@style/HelperTextAppearance"
 
+                    android:textColorHint="@color/white"
+                    app:helperTextTextColor="@android:color/holo_red_dark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                    <ImageView
-                        android:id="@+id/imageView101"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="15dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/icon_check_white" />
+                    <com.google.android.material.textfield.TextInputEditText
 
-                    <ImageView
-                        android:id="@+id/imageView81"
-                        android:layout_width="17.5dp"
-                        android:layout_height="14dp"
-                        android:layout_marginStart="17dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="16dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.615"
-                        app:srcCompat="@drawable/icon_email" />
-
-                    <EditText
-                        android:id="@+id/editTextText"
+                        android:id="@+id/editTextEmail"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="49dp"
+                        android:background="@drawable/background_btn"
+                        android:cursorVisible="true"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:lines="1"
+
+                        android:paddingLeft="45dp"
                         android:paddingRight="8dp"
-                        android:paddingLeft="40dp"
-                        android:background="@drawable/edittext_bottom_line"
-                        android:ems="10"
-                        android:inputType="text"
-
-                        android:textSize="15sp"
-                        android:paddingBottom="2dp"
-                        android:text="anhtrandc539@gmial.com"
-
-
-
-                        android:textColor="@color/color_word"
-
+                        android:textColor="@color/white"
+                        android:textCursorDrawable="@color/white"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.51"
-                        app:layout_constraintStart_toStartOf="@+id/imageView81"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-
-
-                >
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/background_line_btn">
-
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="15dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ico_check_form" />
-
-                    <ImageView
-                        android:id="@+id/imageView8"
-                        android:layout_width="16dp"
-                        android:layout_height="21dp"
-                        android:layout_marginStart="18dp"
-                        android:layout_marginTop="11dp"
-                        android:layout_marginBottom="13dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.615"
-                        app:srcCompat="@drawable/icon_lock" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                    <EditText
-                        android:id="@+id/editTextText2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="14dp"
 
-                        android:layout_marginBottom="15dp"
-                        android:background="@drawable/edittext_bottom_no_line"
-                        android:ems="10"
-                        android:inputType="textPassword"
-                        android:text="Name"
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="14dp"
+
+
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icon_lock" />
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/img2"-->
+<!--                    android:layout_width="15dp"-->
+<!--                    android:layout_height="15dp"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:layout_marginEnd="18dp"-->
+<!--                    android:elevation="100dp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:srcCompat="@drawable/ico_check_form" />-->
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ContainerPassWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:helperText="@string/required"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="16"
+                    app:passwordToggleDrawable="@drawable/eye_slash_regular"
+                    app:passwordToggleEnabled="true"
+                    app:helperTextTextColor="@android:color/holo_red_dark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/editTextPassWord"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/background_line_btn"
+                        android:cursorVisible="true"
+                        android:hint="@string/password"
+                        android:inputType="textEmailAddress"
+                        android:lines="1"
+                        android:paddingLeft="45dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="2dp"
+                        android:textCursorDrawable="@color/white"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.51"
-                        app:layout_constraintStart_toStartOf="@+id/imageView8"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </LinearLayout>
 
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -235,7 +248,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnSubmitForm"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:layout_gravity="center"
@@ -256,8 +269,10 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="4dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
@@ -334,8 +349,10 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -355,7 +372,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/underline"
-            android:textColor="#FFf"/>
+            android:textColor="#FFf" />
 
     </LinearLayout>
 

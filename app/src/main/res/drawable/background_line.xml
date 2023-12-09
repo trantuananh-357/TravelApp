@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:bottom="2dp"
-        android:left="-10dp"
-        android:right="-10dp"
-        android:top="-10dp">
+    <item android:id="@+id/backGround"
+       >
         <shape android:shape="rectangle">
             <corners android:radius="20dp" />
-            <stroke
-                android:width="5dp"
-                android:color="@color/color_btn" /> <!-- Đặt màu sắc của đường line ở đây -->
+            <solid android:color="@color/color_word" />
         </shape>
+    </item>
+    <item android:id="@+id/progess" >
+        <scale android:scaleWidth="100%">
+            <shape android:shape="rectangle">
+                <corners android:radius="20dp" />
+                <solid android:color="@color/color_btn" />
+                <stroke android:color="@color/color_btn" android:width="2dp" />
+
+
+            </shape>
+
+
+        </scale>
+
+
+
+
     </item>
 
     </layer-list>

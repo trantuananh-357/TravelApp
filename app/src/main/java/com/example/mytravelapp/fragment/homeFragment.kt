@@ -12,6 +12,9 @@ import com.example.mytravelapp.customFragment.Categories.CustomAdapterCategories
 import com.example.mytravelapp.customFragment.Categories.OutData
 import com.example.mytravelapp.customFragment.topTrip.CustomAdapterTopTrip
 import com.example.mytravelapp.customFragment.topTrip.Outdata
+import com.example.mytravelapp.customFragment.groupTrips.CustomAdapterGroupTrip
+import com.example.mytravelapp.customFragment.groupTrips.OutDataGroupTrip
+
 
 //private lateinit var _binding: FragmentHomeBinding
 
@@ -64,8 +67,20 @@ class homeFragment : Fragment() {
 
 
 
+        //renderGroupTrip
 
+        val items_GroupTrip = mutableListOf<OutDataGroupTrip>()
+        val listTraveler = mutableListOf<Int>()
 
+        items_GroupTrip.add(OutDataGroupTrip(R.drawable.location_4, "Lake View", "Việt Nam", "Hà Nội",listTraveler, "1200", 80))
+        items_GroupTrip.add(OutDataGroupTrip(R.drawable.location_3, "Lake View", "Việt Nam", "Hà Nội",listTraveler, "1200", 80))
+        items_GroupTrip.add(OutDataGroupTrip(R.drawable.location_3, "Lake View", "Việt Nam", "Hà Nội",listTraveler, "1200", 80))
+        items_GroupTrip.add(OutDataGroupTrip(R.drawable.location_3, "Lake View", "Việt Nam", "Hà Nội",listTraveler, "1200", 80))
+
+        val adapterGroupTrip = CustomAdapterGroupTrip(items_GroupTrip)
+        var recyclerViewGroupTrip : RecyclerView = view.findViewById(R.id.viewRenderGroupTrip)
+        recyclerViewGroupTrip.adapter = adapterGroupTrip
+        recyclerViewGroupTrip.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
 
 
 
